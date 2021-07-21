@@ -1,0 +1,27 @@
+.container{
+    background-color: rgb(95, 23, 23);
+    min-height: calc( 100vh - 2.5rem );
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div{
+    margin-left: 1rem;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+}
+#IMG{
+    position: absolute;
+    top: 30vh;
+    right: 5rem;
+    width: 14rem;
+}
+
+.LINK{
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    color: black;
+}
