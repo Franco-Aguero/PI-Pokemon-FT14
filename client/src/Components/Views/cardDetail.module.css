@@ -1,0 +1,44 @@
+.container{
+    width: 74vw;
+    height: 45vh;
+    background-color: brown;
+    display: flex;
+}
+
+.left{
+    min-width: 13rem;
+    width: 20vw;
+    background-color: rgb(235, 230, 230);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.IMG{
+    margin-top: 0.5rem;
+    width: 7rem;
+    height: 7rem;
+}
+
+
+.types{
+    position: absolute;
+    right: 9px;
+    bottom: 6px;
+    
+}
+
+.right{
+    width: calc(74vw - 20vw);
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.right > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

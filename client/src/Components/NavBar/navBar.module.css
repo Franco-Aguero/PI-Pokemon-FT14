@@ -1,0 +1,21 @@
+.body{
+    background-color: var(--color-NavBar);
+    width: auto;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#btnCreate{
+    cursor: pointer;
+}
+#btnLogo{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.imgLogo{
+    width: 6rem;
+    height: 2.5rem;
+}

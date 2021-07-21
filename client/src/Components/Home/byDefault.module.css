@@ -1,0 +1,15 @@
+.container{
+    position: absolute;
+    background: #420e1c;
+    width: 100vw;
+    height: calc( 100vh - 2.5rem);
+}
+
+#title{
+    margin-top: 4rem;
+}
+
+.image{
+    position: absolute;
+    right: 7rem;
+}

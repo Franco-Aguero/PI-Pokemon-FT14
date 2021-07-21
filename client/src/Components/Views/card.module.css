@@ -1,0 +1,35 @@
+.container{
+    width: 11rem;
+    height: 13rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(158, 67, 25, 0.699);
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.body{
+ 
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.Img{
+    width: 6.5rem;
+}
+
+.footer{
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}

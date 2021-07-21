@@ -1,0 +1,90 @@
+.body{
+    height: calc(100vh - 2.5rem);
+    background-color: rgba(187, 128, 0, 0.89);
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    position: relative;
+    margin-top: 1rem;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    color: white;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.rowOne{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+}
+
+.rowTwo{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.selectTypes{
+    height: 1.3rem;
+    width: 4.5rem;
+    outline: none;
+}
+
+.inputNameAndTypes{
+    width: 4.5rem;
+}
+
+.inputGnral{
+    width: 3.5rem;
+}
+
+#btnAddTypes{
+    height: 1.3rem;
+    background-color: cornflowerblue;
+    cursor: pointer;
+    border: none;
+}
+
+#btnSumbit{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    
+}
+
+.rowThree{
+    width: 13rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#NameOfPoke{
+    position: absolute;
+    top: 20%;
+}
+#imgPoke{
+    width: 6.5rem;
+}
+
+#containerOfTypes{
+    position: absolute;
+    display: flex;
+    bottom: 7rem;
+}
+
+.inputSelectIMG{
+    position: absolute;
+    width: 4.7rem;
+    outline: none;
+    bottom: 36%;
+    right: 0;
+}

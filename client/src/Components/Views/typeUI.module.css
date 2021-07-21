@@ -1,0 +1,32 @@
+.container{
+    background-color: #151717;
+    color: #ffffff;
+    width: max-content;
+    height: max-content;
+    padding-left: 9px;
+    padding-right: 16px;
+    margin: 3px 4px;
+    font-size: 0.8rem;
+    border: 1px solid #8d0e0e;
+    border-radius: 2px;
+    position: relative;
+}
+#btn__Close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background: none;
+    border: none;
+    width: 12px;
+    height: 11px;
+    font-size: 9px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn__Close:hover{
+    background-color: rgba(207, 42, 42, 0.692);
+    color: black;
+}

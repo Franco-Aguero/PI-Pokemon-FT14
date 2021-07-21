@@ -1,0 +1,23 @@
+.container{
+    background-color: black;
+    height: calc( 100vh - 2.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radius{
+    border-radius: 999px;
+    width: 17rem;
+    height: 13rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./pikachu-run.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
