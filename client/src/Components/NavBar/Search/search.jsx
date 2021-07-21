@@ -24,7 +24,7 @@ import s from './search.module.css'
          
         <div className={s.container}>
             <input type="text" className={s.input} name="name" value={input.name} onChange={(e) => handleChange(e)} placeholder="search by name..."  />
-            <button onClick={(e) => handleSubmit(e)} id={s.btnSubmit}><img src={Lupa} alt="lupa search" id={s.IMG} /></button>
+            <button onClick={(e) => handleSubmit(e)} id={s.btnSubmit}><img src={Lupa} alt="lupa search" id={s.IMG} /></button> 
         </div>
          
      )

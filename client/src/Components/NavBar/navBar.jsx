@@ -10,10 +10,10 @@ const NavBar = () => {
     return (
         <div className={s.body}>
             
-            <Link to="/home"><button id={s.btnLogo}><img src={Img} alt="Logo Pokemon" className={s.imgLogo}/></button></Link>
+            <Link to="/"><button id={s.btnLogo}><img src={Img} alt="Logo Pokemon" className={s.imgLogo}/></button></Link>
 
             <Search/>
-            
+
             <Link to="/home/create"><button id={s.btnCreate}>Create Poke</button></Link>
             
         </div>
