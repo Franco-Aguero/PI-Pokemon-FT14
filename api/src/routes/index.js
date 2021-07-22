@@ -55,7 +55,6 @@ async function getBd(){
             types: data.tipos.length > 1 ? {slot_1 : data.tipos[0].name, slot_2: data.tipos[1].name }
             :{slot_1: data.tipos[0].name},
             attack: data.attack
-            /* CUANDO LOGRE VER COMO MANDAR LOS TIPOS AL CREAR, SOLUCIONAR AQUI */
         }
         return obj
     });
@@ -200,7 +199,7 @@ router.get('/pokemons',async (req,res) => {
         res.status(200).json(filtAsce)
     }
     catch(err){
-        /* console.log(' FRANCO, AQUI COMIENZA EL ERRORRR -------', err) */
+        
         res.status(404).json(err)
     }
  
@@ -214,8 +213,7 @@ router.get('/pokemon/:idPokemon',async (req,res) => {
         return res.status(200).json(detail)
     }
     catch(err){
-        /* console.log(' FRANCO, AQUI COMIENZA EL ERRORRR -------', err) */
-        /* SI FILTRO POR ID 0, SE ROMPE TODO, FIJARSE y SOLUCIONAR./ CREO QUE ESTA SOLUCIONADO CON LA LINEA DE ABAJO */
+        
         res.status(404).send('No se encuentro un Pokemon con dicho id')
     }
  
@@ -227,7 +225,6 @@ router.get('/pokemons/specific', async (req,res) =>{
         res.send(await filterName(name))
     }
     catch(err){
-        /* console.log('se GENERO UN ERROR', err); */
         res.status(404).send('UPSS...El pokemon solicitado no se encuentra!!')
     }
 })

@@ -1,7 +1,22 @@
 const { Pokemon, conn } = require('../../src/db.js');
 const { expect } = require('chai');
+var poke= {
+  "name": null,
+  "hp" : null,
+  "attack": 60,
+  "defense": 26,
+  "special_defense": 35,
+  "special_attack": 80,
+  "speed": 68,
+  "height": 2,
+  "weight": 99,
+  "types":[
+      {"id":1, "name": "normal"}
+  ],
+  "image": null
+};
 
-describe('Pokemon model', () => {
+xdescribe('Pokemon model', () => {
   before(() => conn.authenticate()
     .catch((err) => {
       console.error('Unable to connect to the database:', err);
@@ -20,3 +35,14 @@ describe('Pokemon model', () => {
     });
   });
 });
+
+describe("Pokemon model atribute HP", () => 
+  
+  it("create with HP null", () => {
+    Pokemon.create(poke)
+    .then((res)=>{
+      expect(res).to.equal(200)
+    })
+    
+  })
+)

@@ -6,10 +6,22 @@ const { Pokemon, conn } = require('../../src/db.js');
 
 const agent = session(app);
 const pokemon = {
-  name: 'Pikachu',
+  "name": "Pikachu",
+  "hp" : 20,
+  "attack": 60,
+  "defense": 26,
+  "special_defense": 35,
+  "special_attack": 80,
+  "speed": 68,
+  "height": 2,
+  "weight": 99,
+  "types":[
+      {"id":1, "name": "normal"}
+  ],
+  "image": null
 };
 
-describe('Pokemon routes', () => {
+xdescribe('Pokemon routes', () => {
   before(() => conn.authenticate()
   .catch((err) => {
     console.error('Unable to connect to the database:', err);
@@ -22,3 +34,11 @@ describe('Pokemon routes', () => {
     );
   });
 });
+
+describe("GET/types", () => {/* TEST ROUTES */
+  it("responds with 200", () => agent.get('/types').expect(200));
+  it("responds with one array", () =>
+    agent.get('/types').then((res)=>{
+      expect(res).to.be.a('object')
+    }))
+})

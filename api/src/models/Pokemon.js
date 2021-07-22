@@ -19,15 +19,15 @@ module.exports = (sequelize) => {
     },
     hp: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     attack: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     defense: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     special_defense:{
       type: DataTypes.INTEGER,
