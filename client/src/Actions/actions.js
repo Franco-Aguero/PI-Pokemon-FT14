@@ -10,7 +10,6 @@ export const getPrincipal = (name, type) =>{  /* PRIMERA RUTA */
     return async function dispatch(dispatch){
         try{
             const {data} = await axios.get(`http://localhost:3001/pokemons?name=${name}&type=${type}`);
-            console.log(data.length)
             dispatch({type: GET_POKEMONS, payload: data.length > 0 ? data : [null]})
         }
         catch(err){
