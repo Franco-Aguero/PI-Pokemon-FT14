@@ -1,14 +1,24 @@
 .body{
     background-color: var(--color-NavBar);
+    box-shadow: 0px 0px 12px 1px #ffffff;
+    position: relative;
     width: auto;
     height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 #btnCreate{
     cursor: pointer;
+    background: none;
+    border: none;
 }
+
+#btnCreate img{
+    width: 8.5rem;
+}
+
 #btnLogo{
     border: none;
     background: none;
