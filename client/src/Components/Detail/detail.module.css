@@ -1,7 +1,10 @@
 .container{
     height: calc(100vh - 2.5rem);
+    background: var(--background);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
