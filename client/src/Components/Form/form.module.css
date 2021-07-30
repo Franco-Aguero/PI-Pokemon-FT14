@@ -1,20 +1,28 @@
 .body{
     height: calc(100vh - 2.5rem);
-    background-color: rgba(187, 128, 0, 0.89);
+    background: var(--background);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
+.body option{
+    background-color: black;
+    color: white;
+}
 .form{
     position: relative;
     margin-top: 1rem;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.8;
+    background-color: rgb(40 38 38);
+    opacity: 0.95;
     color: white;
     width: 80vw;
     height: 80vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .rowOne{
@@ -47,16 +55,33 @@
 
 #btnAddTypes{
     height: 1.3rem;
-    background-color: cornflowerblue;
+    background: rgba(0, 0, 0, 0.788);
     cursor: pointer;
-    border: none;
+    border: 1px solid rgba(233, 0, 0, 0.384);
+    border-radius: 1px;
+    color: white;
+    outline: none;
 }
 
-#btnSumbit{
+#btnAddTypes:hover{
+    background: rgba(211, 16, 16, 0.39);
+}
+
+#btnSubmit{
     position: absolute;
+    cursor: pointer;
     right: 1rem;
     bottom: 1rem;
-    
+    background: rgb(167, 161, 161);
+    border: 1px solid rgba(255, 255, 255, 0.384);
+    border-radius: 1px;
+    color: black;
+    outline: none;
+}
+#btnSubmit:hover{
+    background: rgba(0, 0, 0, 0.788);
+    border: 1px solid rgba(233, 0, 0, 0.384);
+    color: white;
 }
 
 .rowThree{

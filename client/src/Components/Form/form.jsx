@@ -27,13 +27,10 @@ const Form = () =>{
     };
 
     const addType = (e) =>{
-        setInput(prev => ({
-            ...prev, 
-            types: [...prev.types, store.find(el => el.name === prev.auxTypes)], 
-            auxTypes:''
-        }))
+        (input.types.findIndex(el => el.name === input.auxTypes) === -1)?  
+        setInput(prev => ({...prev, types: [...prev.types, store.find(el => el.name === prev.auxTypes)], auxTypes:''}))
+        :alert("ya se encuentra")
     }
-
 
     const handelSubmit = async(e) => {
         try{
@@ -97,31 +94,29 @@ const Form = () =>{
                                 <option key='0' defaultValue=''></option>
                                 { store.map(el => <option key={el.id} >{el.name}</option>)}
                             </select>
-                            <button type='button' id={s.btnAddTypes} onClick={ (e) => input.types.length < 2 && input.auxTypes?addType(e):null}>{input.types.length < 2?'add':'full'}</button>
+                            <button type='button' id={s.btnAddTypes} onClick={ (e) => input.types.length < 2 && input.auxTypes?addType(e):null}>{input.types.length < 2?'Add':'Full'}</button>
                     </article>
 
                     <article>
-                        <label>Speed</label>
+                        <label>Speed: </label>
                         <input type="number" className={s.inputGnral} name='speed' value={input.speed} onChange={ (e) => handelChange(e.target)}/>   
                     </article>
 
                     <article>
-                        <label>Special Defense</label>
+                        <label>Special Defense: </label>
                         <input type="number" className={s.inputGnral} name='special_defense' value={input.special_defense} onChange={ (e) => handelChange(e.target)} />     
                     </article>
                     
                     <article>
-                        <label>Special Attack</label>
+                        <label>Special Attack: </label>
                         <input type="number" className={s.inputGnral} name='special_attack' value={input.special_attack} onChange={ (e) => handelChange(e.target)} /> 
                     </article> 
 
                     <article>
-                        <label>Height</label>
+                        <label>Height: </label>
                         <input type="number" className={s.inputGnral} name='height' value={input.height} onChange={ (e) => handelChange(e.target)} />
                     </article>
                 </div>
-
-                <button type='submit' id={s.btnSumbit}> Enviar </button>
                 
                 <div className={s.rowThree}>
                     {input.name? <h4 id={s.NameOfPoke}>{input.name}</h4> : null}
@@ -138,6 +133,7 @@ const Form = () =>{
                     </select>
                     
                 </div>
+                <button type='submit' id={s.btnSubmit}> Send </button>
 
             </form>
             
@@ -146,4 +142,3 @@ const Form = () =>{
 }
 
 export default Form;
- 
