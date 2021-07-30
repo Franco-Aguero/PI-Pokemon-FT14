@@ -1,5 +1,6 @@
 .container{
     background-color: var(--color-search);
+    border: 1px solid rgb(0, 0, 0);
     width: 12rem;
     height: 2rem;
     border-radius: 25px;
@@ -16,6 +17,7 @@
     background: none;
     border: none;
     outline: none;
+    color: white;
 }
 
 #btnSubmit{
