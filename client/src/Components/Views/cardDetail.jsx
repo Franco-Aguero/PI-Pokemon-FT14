@@ -1,9 +1,12 @@
 import React from 'react'
+import styleCard from '../Utils/utils'
 import s from './cardDetail.module.css'
 
 const CardDetail = ({ id, name, image, types, statistics, height, weight}) => {
+    const {style} = styleCard;
+    const e = style;
     return (
-        <div className={s.container}>
+        <div className={s.container} style={ e[types.slot_1] || e["default"]}>
 
             <div className={s.left}>
                 <h3>{name}</h3>

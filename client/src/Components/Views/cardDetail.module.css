@@ -1,18 +1,22 @@
 .container{
     width: 74vw;
     height: 45vh;
-    background-color: brown;
+    opacity: 0.9;
     display: flex;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 1px white;
 }
 
 .left{
     min-width: 13rem;
     width: 20vw;
-    background-color: rgb(235, 230, 230);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-right: 3px solid black;
+    border-radius: 15px;
 }
 
 .IMG{
@@ -21,17 +25,14 @@
     height: 7rem;
 }
 
-
 .types{
     position: absolute;
     right: 9px;
     bottom: 6px;
-    
 }
 
 .right{
     width: calc(74vw - 20vw);
-    background-color: darkgreen;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
