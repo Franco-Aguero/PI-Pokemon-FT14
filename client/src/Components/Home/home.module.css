@@ -1,9 +1,19 @@
-.body{
+.padher{
     width: auto;
     min-height: calc(100vh - 2.5rem);
-    background-color: rgba(87, 80, 78, 0.911);
+    background: var(--background);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -20,13 +30,28 @@
     margin-left: 3rem;
     margin-top: 2rem;
 }
+
 .paginado{
-    width: 5rem;
+    width: 8rem;
     display: flex;
     position: relative;
     margin-bottom: 2.5rem;
     background-color: brown;
 }
+.paginado button{
+    background: black;
+    border: none;
+    border-radius: 8px;
+    box-shadow: -1px 0px 3px 0px white;
+    color: white;
+    cursor: pointer;
+}
+.paginado button:hover{
+    background: rgba(255, 255, 255, 0.233);
+    color: black;
+    box-shadow: 0px 0px 0px 0px black;
+}
+
 .decrement{
     position: absolute;
     left: 0;
@@ -35,7 +60,6 @@
 .accountant{
     position: absolute;
     left: 2.2rem;
-   
 }
 
 .increment{

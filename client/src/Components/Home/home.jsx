@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux';
 import Card from '../Views/card';
 import FilterBar from './filterBar';
@@ -13,14 +13,11 @@ const Home = () =>{
 
     const [input, setInput] = useState({
         pagination: 0
-    })
+    });
 
+    const decrement = (e) => { setInput({...input, pagination: --e.target.value}) };
+    const increment = (e) => { setInput({...input, pagination: ++e.target.value}) };
 
-    const decrement = (e) => { setInput({...input, pagination: --e.target.value}) }
-
-    const increment = (e) => { setInput({...input, pagination: ++e.target.value}) }
-
- 
     useEffect( () => {/* MIRA EL DE REDUX, PARA HACER PAGINACION */
        restPagination();
     }, [ store]);
@@ -32,18 +29,15 @@ const Home = () =>{
     const c = input.pagination * 12 ;     /* c("comienzo") */
     const f= c + 12;      /* f("final") */
     return( 
-        <Fragment>
+        <div className={s.padher}>
 
             <FilterBar/> 
             {  
-            
             store.length >= 1? 
             (store[0] === null? <ByDefault/> :
             
             <div className={s.body}>
-            
-                
-
+                        
                 <div className={s.contenedor}>
                     { store.slice(c, f).map( el => <div key={el.id}><Card   
                         id={el.id}
@@ -55,15 +49,14 @@ const Home = () =>{
                 </div>
                 
                     <div className={s.paginado}>
-                        <div className={s.decrement}>{input.pagination !== 0 ? <button value={input.pagination} onClick={ (e) => decrement(e)}>{"<"}</button>: null}</div>
-                            <div className={s.accountant}>{input.pagination}</div>
-                        <div className={s.increment}>{input.pagination !== max ? <button value={input.pagination} onClick={ (e) => increment(e)}>{">"}</button> : null}</div>
+                        <div className={s.decrement}>{input.pagination !== 0 ? <button value={input.pagination} onClick={ (e) => decrement(e)}>{"Previous"}</button>: null}</div>
+                            {/* <div className={s.accountant}>{input.pagination}</div> */}
+                        <div className={s.increment}>{input.pagination !== max ? <button value={input.pagination} onClick={ (e) => increment(e)}>{"Next"}</button> : null}</div>
                     </div>
-                
                 
             </div>)
             : <Charging/> }
-        </Fragment>
+        </div>
     )
 }
 
