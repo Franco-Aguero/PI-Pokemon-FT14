@@ -11,7 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body::-webkit-scrollbar{
+  width: 0.67rem; 
+  height: 1rem; 
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(20, 20, 20);
+  border-radius: 25px;
+  width: 0.4rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1d62ca70;
+  border-radius: 4px;
+  height: 0.5rem;
+}
+
 :root{
-  --color-search : #ffbf00;
+  --color-search :none;
   --color-NavBar : black;
+  --background: url('./Components/Home/background.gif');
 }
