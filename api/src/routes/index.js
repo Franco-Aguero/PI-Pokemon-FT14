@@ -34,7 +34,7 @@ async function list(array){/* Trae los Datos/INFO de los 40 Pokemons */
             let obj={
                 id: data.id,
                 name:data.name, 
-                image: data.sprites.front_default, 
+                image: data.sprites.versions['generation-v']['black-white'].animated.front_default, 
                 types: {slot_1 : data.types[0].type.name, slot_2: data.types[1]? data.types[1].type.name: null},
                 attack: data.stats[1].base_stat
             }
