@@ -5,7 +5,9 @@
     border-radius: 15px;
     opacity: 0.9;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: end;
+    justify-content: center;
     text-decoration: none;
     color: black;
     position: relative;
@@ -31,13 +33,17 @@
 
 .body{
  
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1rem; */
+    position: absolute;
+    bottom: 4rem;
 }
 
 .Img{
-    width: 6.5rem;
+    /* width: 6.5rem; */
+    width: 3.5rem;
+    margin-top: 1.5rem;
 }
 
 .footer{
