@@ -12,9 +12,8 @@ const LoadingPage = () =>{
     }
     return (
         <div className={s.body}>
-
-            <Link to='/home'><button className={s.btnLoading} onClick={() => types()}>POKEMON</button></Link>
-
+            <span className={s.title}>POKÉMON</span>
+            <Link to='/home'><span className={s.Next} onClick={() => types()}>Go!</span></Link>
         </div>
     )
 }
