@@ -1,4 +1,24 @@
 .container{
     position: absolute;
-    right: 1rem;
+    background:#867b7b8c;
+    border-radius: 15px;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 8vw;
+    margin-top: 2rem;
+    color: white;
+    width: 80vw;
+}
+.SELECT{
+    color: #ffffff;
+    border: 1px solid black;
+    background: none;
+    outline: none;
+}
+
+.SELECT option{
+    background-color: black;
+    color: white;
 }
