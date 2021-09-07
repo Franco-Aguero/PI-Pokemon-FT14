@@ -9,7 +9,7 @@ export const getPrincipal = (name, type) =>{  /* PRIMERA RUTA */
 
     return async function dispatch(dispatch){
         try{
-            const {data} = await axios.get(`http://localhost:3001/pokemons?name=${name}&type=${type}`);
+            const {data} = await axios.get(`/pokemons?name=${name}&type=${type}`);
             dispatch({type: GET_POKEMONS, payload: data.length > 0 ? data : [null]})
         }
         catch(err){
@@ -27,7 +27,7 @@ export const getPrincipal = (name, type) =>{  /* PRIMERA RUTA */
 export const getPokeByName = (name) =>{        /* GET FOR NAME */
     return async function dispatch(dispatch){
         try{
-            const {data} = await axios.get(`http://localhost:3001/pokemons/specific?name=${name}`);
+            const {data} = await axios.get(`/pokemons/specific?name=${name}`);
             dispatch({type:GET_POKE_BY_NAME, payload: data})
         }
         catch(err){
@@ -44,7 +44,7 @@ export const getPokeByName = (name) =>{        /* GET FOR NAME */
 export const getPokeById = (id) =>{        /* GET FOR ID */
 
     return async function dispatch(dispatch){
-        const {data} = await axios.get(`http://localhost:3001/pokemon/${id}`);
+        const {data} = await axios.get(`/pokemon/${id}`);
         dispatch({type:GET_POKE_BY_ID, payload: data})
     }  
 }
@@ -52,13 +52,13 @@ export const getPokeById = (id) =>{        /* GET FOR ID */
 export const getTypes = () =>{        /* GET TYPES */
 
     return async function dispatch(dispatch){
-        const {data} = await axios.get('http://localhost:3001/types');
+        const {data} = await axios.get('/types');
         dispatch({type:GET_TYPES_OF_POKE, payload: data})
     }   
 }
 
 export const createPokemon = async () => {
-    const resultadoOfCreater = await axios.post('http://localhost:3001/pokemons');
+    const resultadoOfCreater = await axios.post('/pokemons');
     alert(resultadoOfCreater)
 }
 

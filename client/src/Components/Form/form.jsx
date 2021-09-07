@@ -35,7 +35,7 @@ const Form = () =>{
     const handelSubmit = async(e) => {
         try{
             e.preventDefault();
-            const res = await axios.post('http://localhost:3001/pokemons', input);
+            const res = await axios.post('/pokemons', input);
             alert(res.data);
         }
         catch(err){
