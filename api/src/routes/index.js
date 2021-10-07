@@ -244,7 +244,7 @@ router.get('/pokemon/:idPokemon',async (req,res) => {
     }
     catch(err){
         
-        res.status(404).send('No se encuentro un Pokemon con dicho id')
+        res.status(404).send('No se encontró un Pokemon con dicho id')
     }
  
 })
@@ -277,7 +277,7 @@ router.post('/pokemons', async (req, res) => {
             }
         })
         poke.setTipos( !(types.length > 1) ? [types[0].id] : [types[0].id, types[1].id])
-        created?res.status(200).send("Se ah creado con exito!.")
+        created?res.status(200).send("¡Se creó con exito!")
         :res.status(200).send("Ya se encuentra un pokemon con los mismos datos. Formulario rechazado.")
     }
     catch(err){
