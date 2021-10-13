@@ -10,7 +10,7 @@ Las tecnologias que se utilizo en el: <br/>
 -Back-End fueron, <b>Express | Sequelize | Postgres.</b> 
 </p> 
 Puedes visitar la app apretando en el siguiente link
-<a style={{textDecoration:"none"}} href="https://poke-app-beige.vercel.app/home" rel="noreferrer" target="_blank"> PokeApp </a>.
+<a style={{textDecoration:"none"}} href="https://poke-app-beige.vercel.app/home" target="_blank"> PokeApp </a>.
 <h2><u>PokeApp cuenta con </u></h2>
 <br/>
 
