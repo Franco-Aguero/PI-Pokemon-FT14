@@ -9,7 +9,7 @@ Las tecnologias que se utilizo en el: <br/>
 -Front-End fueron, <b>React | Redux | CSS Modules.</b> <br/>
 -Back-End fueron, <b>Express | Sequelize | Postgres.</b> 
 </p>
-La aplicacion pronto se encontrara deployada para que todas las personas la puedan visitar.
+Puedes visitar la app apretando en el siguiente link https://poke-app-beige.vercel.app/home.
 
 <h2><u>PokeApp cuenta con </u></h2>
 <br/>
